@@ -1,0 +1,118 @@
+@import 'general.css';
+
+.contact_hero{
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.contact_hero img{
+    height: 100%;
+    width: 40vw;
+    z-index: 4;
+    align-self: flex-end ;
+    justify-self: flex-end ;
+}
+
+.hero_text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    height: 100%;
+    z-index: 4;
+    font-size: 2rem;
+}
+
+.hero_text p {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #324d67;
+    margin-top: 40px;
+}
+
+.contact_card{
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    z-index: 5;
+
+    -webkit-box-shadow: -4px 0px 42px -19px rgba(255,165,0,1);
+    -moz-box-shadow: -4px 0px 42px -19px rgba(255,165,0,1);
+    box-shadow: -4px 0px 42px -19px rgba(255,165,0,1);
+}
+
+.contact_cards{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.contact_cards h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.contact_card h2{
+    font-size: 1.5rem;
+    color: #324d67;
+    align-self: center;
+    text-align: center;
+}
+
+.contact_card p{
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #324d67;
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+@media only screen and (min-width: 1000px) {
+    .contact{
+        margin-top: -10vh;
+    }
+
+    .hero_text{
+        width: 40vw;
+    }
+
+    .contact_card{
+        width: 600px;
+        /* min-width: 40vw; */
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .contact_hero img{
+        display: none;
+    }
+    .hero_text{
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .contact_cards{
+        flex-direction: column;
+    }
+}

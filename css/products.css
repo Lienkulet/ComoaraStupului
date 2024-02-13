@@ -1,0 +1,149 @@
+@import 'general.css';
+
+.products {
+    position: relative;
+    font-size: 1rem;
+    /* text-align: center; */
+    min-height: 100vh;
+    padding: 40px 0;
+    color: #324d67;
+}
+
+.products h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.products h4{
+    font-size: 1.25rem;
+}
+
+.products_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 100px 50px;
+    padding: 20px 0;
+}
+
+.filters{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.price_range {
+    display: flex;
+    flex-direction: column;
+}
+
+.price_ranges {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.price_ranges input {
+    width: 100px;
+    padding: 5px 10px;
+    outline: none;
+    border-radius: 10px;
+}
+
+.range {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+}
+
+
+.price_range span {
+    font-weight: 600;
+}
+
+.dropdowns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content:  center;
+    gap: 20px;
+}
+
+.dropbtn {
+    background-color: #fff;
+    z-index: 4;
+    color: #324d67;
+    font-size: 16px;
+    width: 200px;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content span {
+    display: block;
+    font-size: 1rem;
+    color: #324d67;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.dropdown-content span:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+@media only screen and (max-width: 800px) {
+    .filters{
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        /* padding: 0 5px; */
+    }
+
+    .products_header{
+        padding: 0px 15px;
+    }
+
+    .dropbtn {
+        font-size: 14px;
+        width: 170px;
+    }
+
+    
+    .dropdown-content {
+        width: 170px;
+    }
+    
+    .dropdown-content span {
+
+        padding: 12px 10px;
+    }
+    
+    .dropdown-content span:hover {
+        background-color: #ddd;
+    }
+}
