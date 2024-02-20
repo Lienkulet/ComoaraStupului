@@ -135,7 +135,9 @@ export function fetchCart() {
             <h3>${sum} mdl</h3>
           </div>
           <div class="btn_container">
+          <a href='/html/checkout.html'>
             <button type="button" class="orange_button">Achitare</button>
+          </a>
           </div>
         `;
     }

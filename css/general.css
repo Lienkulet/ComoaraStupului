@@ -323,7 +323,8 @@ main{
      flex-direction: column;
      align-self: start;
      justify-content: flex-start;
-
+      align-items: start;
+      padding-left: 20px;
   }
   .socials{
     flex-direction: column;
@@ -332,8 +333,8 @@ main{
     display: flex;
     flex-direction: row;
     align-items: start;
-    justify-content: flex-start;
-    gap: 5rem;
+    width: 100%;
+    justify-content: space-between;
   }
 
   .socials li{
@@ -395,20 +396,10 @@ main{
   .footer_left{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
   }
  
-
-  .waves{
-    display: flex;
-    flex-direction: column;
-    gap: 0px;
-  }
-  .waves img{
-    width: 100%;
-    height: 10rem;
-  }
 
   .validation_error{
     display: none;
@@ -458,8 +449,8 @@ main{
   }
 
   .contact_img_wrapper{
-    width: 37.5rem;
-    height: 34.375rem;
+    /* width: 37.5rem;
+    height: 34.375rem; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -496,73 +487,9 @@ main{
     margin-bottom: .5rem;
   }
 
-  .form_details,
-  .contact form{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 1rem;
-    width: 40vw;
-  }
-
-  .form_details textarea,
-  .form_details input{
-    width: 38vw;
-  }
-
-  .form_details textarea,
-  .form_details input,
-  .form_header input{
-    padding: 10px;
-    border-radius: 10px;
-    border: 1px solid #324d67;
-    outline: none;
-    background-color: #ffff;
+  .contact_numbers a{
     color: #324d67;
-    /* -webkit-box-shadow: -4px 0px 42px -19px rgba(255,165,0,1);
-    -moz-box-shadow: -4px 0px 42px -19px rgba(255,165,0,1);
-    box-shadow: -4px 0px 42px -19px rgba(255,165,0,1); */
-  }
-
-  .form_header{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between !important;
-    gap: 1rem;
-    width: 38vw;
-/* 
-    align-self: flex-start !important;
-    justify-self: flex-start !important; */
-  }
-
-  .form_header input{
-    width: 100%;
-  }
-
-  .form_subheader{
-    width: 45%;
-    position: relative;
-  }
-  
-  .contact form .orange_button{
-    margin-top: 0;
-    width: 40vw;
-  }
-
-   form .orange_button:hover{
-    transform: scaleX(1.025);
-  }
-
-  .contact form .validation_error{
-    background-color: #ffff;
-    top: -25%;
-  }
-  
-  .contact{
-    position: relative;
-    padding: 20px 0;
+    font-weight: bold;
   }
 
   .cart_icon{
@@ -742,13 +669,30 @@ main{
     display: none;
    }
 
+   @media only screen and (min-width: 900px) and (max-width: 1100px){
+    footer .head_text{
+      font-size: 1.90rem;
+    }
+  
+  }
+
+  @media only screen and (min-width: 700px) and (max-width: 900px){
+    footer .head_text{
+      font-size: 1.5rem;
+    }
+  }
+
    @media only screen and (min-width: 900px) {
     footer form{
-      max-width: 40vw;
+      width: 600px;
+    }
+
+    .footer input{
+      width: 580px;
     }
 
     .footer .orange_button{
-      width: 40vw;
+      width: 600px;
     }
 
     nav{
@@ -887,33 +831,7 @@ main{
     /* max-width: 40vw; */
   }
 
-  .form_details,
-  .contact form{
-    align-items: center;
-    justify-content: center;
-    width: 85vw;
-  }
-
-  .form_details textarea,
-  .form_details input{
-    width: 80vw;
-  }
-
-  .form_header{
-    align-items: flex-start;
-    align-self: flex-start;
-    justify-self: flex-start !important;
-    width: 100%;
-    max-width: 80vw;
-  }
-
-  .contact form .orange_button{
-    width: 85vw;
-  }
-
-  .contact form .validation_error{
-    font-size: .75rem !important;
-  }
+ 
 
   nav a{
     font-size: 1.75rem;

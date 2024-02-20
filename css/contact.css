@@ -84,6 +84,76 @@
     margin-top: 10px;
 }
 
+.form_details,
+.contact form{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  max-width: 600px !important;
+}
+
+.form_details textarea,
+.form_details input{
+  width: 580px;
+  border: 1px solid #B09164;
+}
+
+.form_details textarea,
+.form_details input,
+.form_header input{
+  padding: 10px;
+  border-radius: 10px;
+  /* border: 1px solid #324d67; */
+  border: 1px solid #B09164;
+  outline: none;
+  background-color: #ffff;
+  color: #324d67;
+  /* -webkit-box-shadow: -4px 0px 42px -19px rgba(255,165,0,1);
+  -moz-box-shadow: -4px 0px 42px -19px rgba(255,165,0,1);
+  box-shadow: -4px 0px 42px -19px rgba(255,165,0,1); */
+}
+
+.form_header{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between !important;
+  gap: 1rem;
+  width: 600px;
+  /* 
+  align-self: flex-start !important;
+  justify-self: flex-start !important; */
+}
+
+.form_header input{
+    width: 270px;
+}
+
+.form_subheader{
+  width: 50%;
+  position: relative;
+}
+
+.contact form .orange_button{
+  margin-top: 0;
+  width: 600px;
+}
+
+ form .orange_button:hover{
+  transform: scaleX(1.025);
+}
+
+.contact form .validation_error{
+  background-color: #ffff;
+  top: -25%;
+}
+
+.contact{
+  position: relative;
+  padding: 20px 0;
+}
 
 
 @media only screen and (min-width: 1000px) {
@@ -114,5 +184,38 @@
 
     .contact_cards{
         flex-direction: column;
+    }
+
+    .form_details,
+    .contact form{
+      align-items: center;
+      justify-content: center;
+      width: 85vw;
+    }
+  
+    .form_details textarea,
+    .form_details input{
+      width: 80vw;
+    }
+  
+    .form_header{
+      align-items: flex-start;
+      align-self: flex-start;
+      flex-direction: column;
+      justify-self: flex-start !important;
+      width: 100%;
+      max-width: 80vw;
+    }
+
+    .form_header input{
+        width: 80vw;
+    }
+  
+    .contact form .orange_button{
+      width: 85vw;
+    }
+  
+    .contact form .validation_error{
+      font-size: .75rem !important;
     }
 }
