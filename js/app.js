@@ -83,7 +83,8 @@ export function fetchCart() {
     cartArr = JSON.parse(localStorage.getItem('cart')) || []; // Refresh the cart array from localStorage
     let cartItemsNr = cartArr.reduce((acc, prod) => acc + prod.quantity, 0);
     cart.innerText = cartItemsNr;
-    if (cartArr.length === 0) {
+    if (cartArr.length <= 0) {
+        cartMenu.innerText = `(${cartItemsNr} prosuse)`;
         empty_cart.style.display = 'flex'
         product_container.innerHTML = '';
         cart_bottom.innerHTML = '';
