@@ -493,6 +493,12 @@ main{
     font-weight: bold;
   }
 
+  .contact_numbers a:hover{
+    color: orange;
+    transition: all .5s ease-in-out;
+    font-weight: medium;
+  }
+
   .cart_icon{
     font-size: 30px;
     color: gray;
