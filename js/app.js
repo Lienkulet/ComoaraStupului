@@ -132,7 +132,7 @@ export function fetchCart() {
 
         cart_bottom.innerHTML = `
           <div class="total">
-            <h3>SubTotal:</h3>
+            <h3>Total:</h3>
             <h3>${sum} mdl</h3>
           </div>
           <div class="btn_container">
