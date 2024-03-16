@@ -28,7 +28,7 @@ productsArr.forEach(category => {
         description.innerText = productDetails.description;
         price.innerText = productDetails.price;
         imgSrc.src = productDetails.img;
-        bucata.innerText = `per ${productDetails.bucata}`;
+        bucata.innerText = `mdl per ${productDetails.bucata}`;
     }
 });
 
