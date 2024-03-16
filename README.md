@@ -7,5 +7,5 @@ Technologies used:
 - JS
 - CSS
 
-website: https://comoarastupului.static.domains/html/home.html
+website: https://comoarastupului.com
 github: https://github.com/Lienkulet/ComoaraStupului
