@@ -6,15 +6,21 @@ import { usePathname } from 'next/navigation'
 import { useCart } from '@/context/CartContext'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
+import { useLanguage } from '@/context/LanguageContext'
 import styles from './Header.module.css'
 
 gsap.registerPlugin(useGSAP)
+
+const NAV_LABELS = {
+  RO: { home: 'Acasă', products: 'Produse', about: 'Despre Noi', contact: 'Contact' },
+  RU: { home: 'Главная', products: 'Продукты', about: 'О нас', contact: 'Контакт' },
+}
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const [langOpen, setLangOpen] = useState(false)
-  const [activeLang, setActiveLang] = useState('RO')
+  const { lang, setLang } = useLanguage()
   const { cartCount, setIsCartOpen } = useCart()
   const pathname = usePathname()
   const headerRef = useRef(null)
@@ -63,11 +69,12 @@ export default function Header() {
     { scope: headerRef }
   )
 
+  const n = NAV_LABELS[lang]
   const navItems = [
-    { href: '/', label: 'Acasă' },
-    { href: '/produse', label: 'Produse' },
-    { href: '/despre', label: 'Despre Noi' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/', label: n.home },
+    { href: '/produse', label: n.products },
+    { href: '/despre', label: n.about },
+    { href: '/contact', label: n.contact },
   ]
 
   return (
@@ -99,9 +106,9 @@ export default function Header() {
               aria-label="Selectează limba"
             >
               <span className={styles.langFlag}>
-                {activeLang === 'RO' ? '🇷🇴' : '🇷🇺'}
+                {lang === 'RO' ? '🇷🇴' : '🇷🇺'}
               </span>
-              <span className={styles.langCode}>{activeLang}</span>
+              <span className={styles.langCode}>{lang}</span>
               <svg
                 className={`${styles.langChevron} ${langOpen ? styles.open : ''}`}
                 width="12" height="12" viewBox="0 0 24 24"
@@ -113,15 +120,15 @@ export default function Header() {
             </button>
             {langOpen && (
               <div className={styles.langMenu}>
-                {['RO', 'RU'].map(lang => (
+                {['RO', 'RU'].map(l => (
                   <button
-                    key={lang}
-                    className={`${styles.langOption} ${activeLang === lang ? styles.langActive : ''}`}
-                    onClick={() => { setActiveLang(lang); setLangOpen(false) }}
+                    key={l}
+                    className={`${styles.langOption} ${lang === l ? styles.langActive : ''}`}
+                    onClick={() => { setLang(l); setLangOpen(false) }}
                   >
-                    <span>{lang === 'RO' ? '🇷🇴' : '🇷🇺'}</span>
-                    <span>{lang === 'RO' ? 'Română' : 'Русский'}</span>
-                    {activeLang === lang && (
+                    <span>{l === 'RO' ? '🇷🇴' : '🇷🇺'}</span>
+                    <span>{l === 'RO' ? 'Română' : 'Русский'}</span>
+                    {lang === l && (
                       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                         <polyline points="20 6 9 17 4 12" />
                       </svg>
